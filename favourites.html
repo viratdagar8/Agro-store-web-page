@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favourites</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      margin-right: 15px;
+    }
+
+    .item-info {
+      flex: 1;
+    }
+
+    .remove-btn {
+      background: #e63946;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .remove-btn:hover {
+      background: #d62828;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Your Favourites </h2>
+
+    <div class="item">
+      <img src="tomato.jpg" alt="product">
+      <div class="item-info">
+        <h3>Premium tamotoSeeds</h3>
+        <p>High-quality organic seeds.</p>
+      </div>
+      <button class="remove-btn">Remove</button>
+    </div>
+
+    <div class="item">
+      <img src="vermicompost.jpg" alt="product">
+      <div class="item-info">
+        <h3>Vermi Fertilizer</h3>
+        <p>Boost soil fertility naturally.</p>
+      </div>
+      <button class="remove-btn">Remove</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

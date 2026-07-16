@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cart-container {
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      margin-right: 15px;
+    }
+
+    .cart-info {
+      flex: 1;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #4CAF50;
+    }
+
+    .checkout-btn {
+      background: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .checkout-btn:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cart-container">
+    <h2>Your Cart </h2>
+
+    <div class="cart-item">
+      <img src="tomato.jpg" alt="product">
+      <div class="cart-info">
+        <h3>Premium Wheat Seeds</h3>
+        <p class="price">399/-</p>
+      </div>
+    </div>
+
+    <div class="cart-item">
+      <img src="handweeder.jpg" alt="product">
+      <div class="cart-info">
+        <h3>Hand Shovel</h3>
+        <p class="price">200/-</p>
+      </div>
+    </div>
+
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </div>
+
+</body>
+</html>
