@@ -1,28 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import products from "../data/products";
 
-const Products = ({ onAddToCart }) => {
+function Products({ onAddToCart }) {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+
+    fetch("http://127.0.0.1:5000/api/products")
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching products:", error);
+      });
+
+  }, []);
 
   return (
-    <div className="products-page">
+    <div>
 
       <h1>Our Products</h1>
 
       <div className="product-grid">
 
         {products.map((product) => (
+
           <ProductCard
             key={product.id}
             product={product}
             onAddToCart={onAddToCart}
           />
+
         ))}
 
       </div>
 
     </div>
   );
-};
+}
 
 export default Products;
